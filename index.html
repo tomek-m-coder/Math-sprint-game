@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="warning">
+     if the options are partially visibile zoom out the browser
+    </div>
     <div class="game-container">
-      <!-- Header -->
+      <!-- Shared header -->
       <div class="header">
         <h1>Math Sprint Game</h1>
       </div>
 
       <!-- Splash Page -->
       <div class="card" id="splash-page">
-        <form id="start-form">
+        <form action="" id="start-form">
           <div class="selection-container">
-            <!-- 10 Questions Radio Input -->
+            <!-- 10 Questions Radio input -->
             <div class="radio-container">
               <label for="value-10">10 Questions</label>
               <input type="radio" name="questions" value="10" id="value-10" />
@@ -27,7 +30,7 @@
                 <span class="best-score-value"></span>
               </span>
             </div>
-            <!-- 25 Questions Radio Input -->
+            <!-- 25 Questions Radio input -->
             <div class="radio-container">
               <label for="value-25">25 Questions</label>
               <input type="radio" name="questions" value="25" id="value-25" />
@@ -36,7 +39,7 @@
                 <span class="best-score-value"></span>
               </span>
             </div>
-            <!-- 50 Questions Radio Input -->
+            <!-- 50 Questions Radio input -->
             <div class="radio-container">
               <label for="value-50">50 Questions</label>
               <input type="radio" name="questions" value="50" id="value-50" />
@@ -45,7 +48,7 @@
                 <span class="best-score-value"></span>
               </span>
             </div>
-            <!-- 99 Questions Radio Input -->
+            <!-- 99 Questions Radio input -->
             <div class="radio-container">
               <label for="value-99">99 Questions</label>
               <input type="radio" name="questions" value="99" id="value-99" />
@@ -62,19 +65,19 @@
         </form>
       </div>
 
-      <!-- Countdown Page -->
+      <!-- Countdown page -->
       <div class="card" id="countdown-page" hidden>
-        <h1 class="countdown">3</h1>
+        <h1 class="countdown"></h1>
       </div>
 
       <!-- Game Page -->
       <div class="card" id="game-page" hidden>
         <!-- Item Container -->
         <div class="item-container"></div>
-        <!-- Right/Wrong Buttons -->
+        <!-- Right/Wrong buttons -->
         <div class="item-footer">
-          <button class="wrong" onclick="select(false)">Wrong</button>
-          <button class="right" onclick="select(true)">Right</button>
+          <button class="wrong" onclick="select('false')">Wrong</button>
+          <button class="right" onclick="select('true')">Right</button>
         </div>
       </div>
 
@@ -87,7 +90,7 @@
           <h1 class="base-time"></h1>
           <h1 class="penalty-time"></h1>
         </div>
-        <!-- Play Again Button -->
+        <!-- Play Again button -->
         <div class="score-footer">
           <button class="play-again" onclick="playAgain()" hidden>
             Play Again
